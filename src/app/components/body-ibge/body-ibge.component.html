@@ -1,0 +1,28 @@
+
+<div class="containter my-4">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <select (change)="loadMunicipiosByUF($event)" name="uf" id="uf" class="form-select" aria-label="Default select example">
+      <option selected>Selecione a cidade</option>
+      <option value="SC">SC</option>
+      <option value="PA">PA</option>
+      <option value="SP">SP</option>
+      <option value="MG">MG</option>
+      <option value="RJ">RJ</option>
+    </select>
+    <br>
+    <hr>
+    <br>
+    <label for="cidades"><h3>Cidades</h3></label>
+    <br>
+    <div>
+    <p *ngFor="let cidade of cidades$ | async"> {{cidade.nome}}<br></p>
+
+
+
+    </div>
+    <br>
+    <br>
+  </div>
+  </div>
+</div>
